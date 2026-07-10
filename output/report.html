@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StatikAnalyzer Report</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 32px; background: #f6f7fb; color: #222; }
+    h1, h2 { margin-bottom: 0.4rem; }
+    .card { background: white; border-radius: 16px; padding: 20px; margin: 18px 0; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+    table { width: 100%; border-collapse: collapse; background: white; }
+    th, td { text-align: left; border-bottom: 1px solid #e7e7ee; padding: 10px; vertical-align: top; }
+    th { background: #fbfbfd; }
+    code { background: #f0f1f5; padding: 2px 5px; border-radius: 6px; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+    .good { background: #e4f7ea; color: #176b36; }
+    .bad { background: #fde8e8; color: #9a1c1c; }
+    .warn { background: #fff4d6; color: #7a5400; }
+    .neutral { background: #e8eef9; color: #244a88; }
+    .event { border-left: 4px solid #7d8db7; padding: 8px 0 10px 14px; margin: 12px 0; }
+    .time { color: #666; font-size: 0.9rem; }
+    .score { color: #666; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <h1>StatikAnalyzer Report</h1>
+  <p>静的解析結果のサマリーです。ファイル本体は実行していません。</p>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table>
+      <thead><tr><th>File</th><th>SHA-256</th><th>Class</th><th>Risk</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>sample_pe_like.bin</td>
+          <td><code>c76694ca9cb35ebc...</code></td>
+          <td><span class="badge good">clean</span></td>
+          <td>0</td>
+          <td>MVPルール上、強い不審点は確認されませんでした</td>
+        </tr>
+        
+        <tr>
+          <td>sample_text.txt</td>
+          <td><code>adaf265255994830...</code></td>
+          <td><span class="badge neutral">non_pe</span></td>
+          <td>0</td>
+          <td>PE形式ではないため、PE解析対象外として記録しました</td>
+        </tr>
+        </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Timeline</h2>
+    
+        <div class="event">
+          <div class="time">2026-07-09T15:18:46.535664+00:00</div>
+          <div><strong>sample_pe_like.bin</strong>
+          <span class="badge good">clean</span>
+          <span class="score">score 0</span></div>
+          <p>MVPルール上、強い不審点は確認されませんでした</p>
+        </div>
+        
+        <div class="event">
+          <div class="time">2026-07-09T15:18:46.536517+00:00</div>
+          <div><strong>sample_text.txt</strong>
+          <span class="badge neutral">non_pe</span>
+          <span class="score">score 0</span></div>
+          <p>PE形式ではないため、PE解析対象外として記録しました</p>
+        </div>
+        
+  </section>
+</body>
+</html>

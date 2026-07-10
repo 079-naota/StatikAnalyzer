@@ -1,0 +1,24 @@
+[
+  {
+    "timestamp": "2026-07-09T15:18:46.535664+00:00",
+    "source": "StatikAnalyzer",
+    "event_type": "file_static_analysis",
+    "file_name": "sample_pe_like.bin",
+    "file_path": "/mnt/data/StatikAnalyzer/samples/sample_pe_like.bin",
+    "sha256": "c76694ca9cb35ebc9801db82952c32d3afdac0183aae14b982b12f4a6612cfbf",
+    "classification": "clean",
+    "risk_score": 0,
+    "message": "MVPルール上、強い不審点は確認されませんでした"
+  },
+  {
+    "timestamp": "2026-07-09T15:18:46.536517+00:00",
+    "source": "StatikAnalyzer",
+    "event_type": "file_static_analysis",
+    "file_name": "sample_text.txt",
+    "file_path": "/mnt/data/StatikAnalyzer/samples/sample_text.txt",
+    "sha256": "adaf265255994830f4d63361a82d19945d112a05a51b3480330d46391fce4e13",
+    "classification": "non_pe",
+    "risk_score": 0,
+    "message": "PE形式ではないため、PE解析対象外として記録しました"
+  }
+]

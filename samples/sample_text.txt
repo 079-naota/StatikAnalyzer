@@ -1,0 +1,1 @@
+This is a safe non-PE sample file for StatikAnalyzer local testing.

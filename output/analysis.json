@@ -1,0 +1,163 @@
+[
+  {
+    "schema_version": "1.0",
+    "tool": "StatikAnalyzer",
+    "analysis_time": "2026-07-09T15:18:46.535664+00:00",
+    "file_info": {
+      "file_name": "sample_pe_like.bin",
+      "file_path": "/mnt/data/StatikAnalyzer/samples/sample_pe_like.bin",
+      "extension": ".bin",
+      "file_size": 2048,
+      "created_time": "2026-07-09T15:18:45.112574+00:00",
+      "modified_time": "2026-07-09T15:18:45.112574+00:00",
+      "accessed_time": "2026-07-09T15:18:31.018190+00:00",
+      "is_readable": true
+    },
+    "hashes": {
+      "md5": "4088631dd4417b9a0699fb61f4150623",
+      "sha256": "c76694ca9cb35ebc9801db82952c32d3afdac0183aae14b982b12f4a6612cfbf"
+    },
+    "pe_analysis": {
+      "success": true,
+      "is_pe": true,
+      "pe_info": {
+        "dos_signature": "MZ",
+        "pe_signature": "PE\\0\\0",
+        "e_lfanew": 128,
+        "machine": "AMD64",
+        "machine_hex": "0x8664",
+        "number_of_sections": 2,
+        "time_date_stamp": 1710000000,
+        "compile_timestamp_utc": "2024-03-09T16:00:00+00:00",
+        "size_of_optional_header": 240,
+        "characteristics_hex": "0x22",
+        "optional_header": {
+          "magic": "0x20b",
+          "type": "PE32+",
+          "address_of_entry_point": "0x1000",
+          "image_base": "0x140000000",
+          "section_alignment": 4096,
+          "file_alignment": 512,
+          "size_of_image": 12288,
+          "size_of_headers": 512,
+          "subsystem": "Windows CUI",
+          "subsystem_value": 3,
+          "dll_characteristics_hex": "0x140",
+          "dll_characteristics": [
+            "dynamic_base_ASLR",
+            "nx_compat_DEP"
+          ]
+        }
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "virtual_size": 256,
+          "virtual_address": "0x1000",
+          "size_of_raw_data": 512,
+          "pointer_to_raw_data": 512,
+          "raw_data_available": true,
+          "characteristics_hex": "0x60000020",
+          "characteristics": [
+            "code",
+            "execute",
+            "read"
+          ],
+          "entropy": 0.5436,
+          "entropy_level": "low"
+        },
+        {
+          "name": ".data",
+          "virtual_size": 128,
+          "virtual_address": "0x2000",
+          "size_of_raw_data": 512,
+          "pointer_to_raw_data": 1024,
+          "raw_data_available": true,
+          "characteristics_hex": "0xc0000040",
+          "characteristics": [
+            "initialized_data",
+            "read",
+            "write"
+          ],
+          "entropy": 1.0,
+          "entropy_level": "low"
+        }
+      ],
+      "errors": []
+    },
+    "vt_result": {
+      "queried": false,
+      "found": false,
+      "stats": {},
+      "error": {
+        "module": "virus_client",
+        "code": "vt_disabled"
+      }
+    },
+    "classification": {
+      "classification": "clean",
+      "risk_score": 0,
+      "reasons": [
+        "MVPルール上、強い不審点は確認されませんでした"
+      ],
+      "warnings": [
+        "VirusTotal照会は完了していません: vt_disabled"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "schema_version": "1.0",
+    "tool": "StatikAnalyzer",
+    "analysis_time": "2026-07-09T15:18:46.536517+00:00",
+    "file_info": {
+      "file_name": "sample_text.txt",
+      "file_path": "/mnt/data/StatikAnalyzer/samples/sample_text.txt",
+      "extension": ".txt",
+      "file_size": 68,
+      "created_time": "2026-07-09T15:18:09.169814+00:00",
+      "modified_time": "2026-07-09T15:18:09.169814+00:00",
+      "accessed_time": "2026-07-09T15:18:31.018725+00:00",
+      "is_readable": true
+    },
+    "hashes": {
+      "md5": "3bbabb79fc082eea446797d49afe4b3d",
+      "sha256": "adaf265255994830f4d63361a82d19945d112a05a51b3480330d46391fce4e13"
+    },
+    "pe_analysis": {
+      "success": true,
+      "is_pe": false,
+      "pe_info": {},
+      "sections": [],
+      "errors": [
+        {
+          "module": "pe_parser",
+          "code": "non_pe_missing_mz"
+        }
+      ]
+    },
+    "vt_result": {
+      "queried": false,
+      "found": false,
+      "stats": {},
+      "error": {
+        "module": "virus_client",
+        "code": "vt_disabled"
+      }
+    },
+    "classification": {
+      "classification": "non_pe",
+      "risk_score": 0,
+      "reasons": [
+        "PE形式ではないため、PE解析対象外として記録しました"
+      ],
+      "warnings": []
+    },
+    "errors": [
+      {
+        "module": "pe_parser",
+        "code": "non_pe_missing_mz"
+      }
+    ]
+  }
+]
